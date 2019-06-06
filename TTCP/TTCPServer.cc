@@ -73,5 +73,6 @@ int main(){
     }
     ::free(mess);
     ::close(clientfd);
+    //这里可以测试吞吐量，每秒收发多少消息
     return 0;
 }

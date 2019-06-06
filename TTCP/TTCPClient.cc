@@ -67,6 +67,6 @@ int main(int argc,char* argv[]){
     float timeuse=1000000*(time2.tv_sec-time1.tv_sec)+time2.tv_usec-time1.tv_usec;
     timeuse/=1000000;       
     //printf("used time:%f sec\n",timeuse);
-    printf("%.3f seconds\n%.3f MiB/s\n", timeuse, total_mb / timeuse);
+    printf("%.3f seconds\n%.3f MiB/s\n", timeuse, total_mb / timeuse);//带宽指的是每秒处理多少字节数
     return 0;
 }
