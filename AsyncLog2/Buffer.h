@@ -33,6 +33,12 @@ public:
     void persist(FILE*);
     Buffer* before_;
     Buffer* after_;
+    BUFFER_STATUS status(){
+        return status_;
+    }
+    void setstatusfull(){
+        status_ = BUFFER_STATUS::FULL;
+    }
 private:
     BUFFER_STATUS status_;
     char* data_;

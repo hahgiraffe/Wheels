@@ -41,6 +41,7 @@ private:
     char log_dir_[512];
     int level_;
     bool _env_ok;
+    int lasterror;
     
     static pthread_mutex_t mutex_;
     static pthread_cond_t condition_;
