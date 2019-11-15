@@ -25,9 +25,8 @@ struct Large_memory_data{
 struct memory_pool{
     memory_data d;
     int maxsize;
-    Large_memory_data*  large;
+    Large_memory_data*  large;  //链表
     memory_pool* current;
-    // Clean_up* clean_up;
 };
 
 /* 这两个是操作内存池的申请内存，当内存池结束时候会自动释放 */
@@ -40,7 +39,7 @@ void* memory_palloc_small(memory_pool* pool, size_t size);
 void* memory_palloc_large(memory_pool* pool, size_t size);
 void* memory_palloc_block(memory_pool* pool, size_t size);
 
-/* 线程池操作 */
+/* 内存池操作 */
 memory_pool* create_pool(size_t size);/*这个size不只是申请内存池大小，还包括管理结构的大小。默认16k以上 */
 void destroy_pool(memory_pool* pool);
 

@@ -1,7 +1,7 @@
 /*
  * @Author: haha_giraffe
  * @Date: 2019-10-13 13:44:11
- * @Description: file content
+ * @Description: memory_pool
  */
 #include <string.h>
 #include "memory_pool.h"
