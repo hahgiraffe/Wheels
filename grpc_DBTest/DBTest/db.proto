@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package dbcontent;
+
+service QueryDB{
+    rpc DoQuery (QueryRequest) returns (QueryReply) {}
+    rpc DoAllQuery (QueryRequest) returns (stream QueryReply) {}
+}
+
+message QueryRequest{
+    string name = 1;
+}
+
+message QueryReply{
+    string mess_age = 1;
+    string mess_school = 2;
+    repeated string mess_hobby = 3;
+    string mess_name = 4;
+}
